@@ -125,7 +125,25 @@ void draw() {
 }
 ```
 
+
 ### Ejemplo 05
+
+```processing
+void setup() {
+  size(500,400);
+}
+
+void draw() {
+  line(mouseX, mouseY, width/2, height/2);
+}
+
+void mousePressed() {
+  exit(); 
+}
+``` 
+
+
+### Ejemplo 06
 
 ```processing
 void setup() {
@@ -195,21 +213,25 @@ void draw(){
 class Particle {
   PVector pos, vel, acc, prev;
   float max = random(2, 8);
+  
   Particle() {
     pos = new PVector(width/2, height/2);
     prev = new PVector(pos.x, pos.y);
     vel = new PVector(0, 0);
     acc = new PVector(0, 0);
   }
+  
   void copy() {
     prev.x = pos.x;
     prev.y = pos.y;
   }
+  
   void run() {
     follow();
     update();
     show();
   }
+  
   void update() {
     pos.add(vel);
     vel.limit(max);
@@ -232,12 +254,14 @@ class Particle {
       copy();
     }
   }
+  
   void follow() {
     int x = floor(pos.x / rez);
     int y = floor(pos.y / rez);
     PVector force = vectors[x + y * cols];
     acc.add(force);
   }
+  
   void show() {
     stroke(col, 255, 255, 5);
     line(pos.x, pos.y, prev.x, prev.y);
@@ -289,9 +313,8 @@ void draw() {
   zoff += 0.005;
   if (col < 255)col += 0.1;
   else col = 0;
-  for (Particle p : particles)p.run();
+  for (Particle p : particles) p.run();
 }
-
 
 void mousePressed()
 {
