@@ -170,6 +170,27 @@ void draw() {
 }
 ```
 
+### Ejemplo 07
+
+```processing
+PImage img;
+
+void setup(){  
+  size (800,600);
+  background(180);
+  img = loadImage("pony.png");
+}
+
+void draw(){
+  background(180);
+  image(img,0,0);
+  ellipse(mouseX,mouseY,50,50); 
+}
+```
+
+
+
+
 ## Referencias
 
 - [Video introductorio, en inglés](https://www.pbs.org/video/-book-art-creative-coding/)
