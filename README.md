@@ -163,7 +163,7 @@ void draw() {
 }
 ```
 
-### Ejemplo 06
+### Ejemplo 07
 
 ```processing
 void setup() {
@@ -188,7 +188,7 @@ void draw() {
 }
 ```
 
-### Ejemplo 07
+### Ejemplo 08
 
 ```processing
 PImage img;
@@ -204,6 +204,63 @@ void draw(){
   image(img,0,0);
   ellipse(mouseX,mouseY,50,50); 
 }
+```
+
+### Ejemplo 08
+
+```processing
+int posX; 
+int posY;
+PImage img;
+
+
+void setup(){
+  size(800,600);
+  img = loadImage("mario.png");
+  posX = width/3;
+  posY = height/3;  
+}
+
+
+void draw(){
+  background(180);
+  image(img, posX, posY);
+}
+
+
+void keyPressed()
+{
+
+  switch (keyCode) {
+    case UP:     posY -= 10; break;
+    case DOWN:   posY += 10; break;
+    case LEFT:   posX -= 10; break;
+    case RIGHT:  posX += 10; break;
+    default:
+  }
+  
+  switch (key) {
+    case '0':    posX =   0; break;
+    case '1':    posX = 100; break;
+    case '2':    posX = 200; break;
+    case 'A':
+    case 'a':    posY =   0; break;
+    case 'B':   
+    case 'b':    posY = 100; break;
+    case 'C':   
+    case 'c':    posY = 200; break;
+    case ENTER:
+    case RETURN: posX = width/3; posY = height/3; break;
+    case ESC:    exit();
+    default:    
+  } 
+}
+
+
+void mousePressed()
+{
+  exit();
+} 
 ```
 
 
