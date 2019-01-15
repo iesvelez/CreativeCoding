@@ -13,13 +13,7 @@ size (w,h);
 
 ![coordenadas de pantalla](coordenadas.svg)
 
-```
-0,0-------> hacia infinito positivo
- |
- |
- v
-hacia infinito positivo
-```
+
 
 ### Figuras
 
@@ -56,7 +50,7 @@ fill (r,g,b);
 - b (green) - cantidad de azul,  de 0 (ninguno) a 255 (máximo)
 ```
 
-![colores RGB](colores.svg)
+![colores RGB](colores.jpg)
 
 ### Ejemplo 01 
 
