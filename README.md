@@ -2,7 +2,29 @@
 Programación Creativa
 
 
-## Funciones básicas
+## Introducción
+
+Esto es una iniciación a la Programación Creativa usando el lenguaje Processing, el cual se basa en Java.
+
+El enlace para descargar el entorno de desarrollo es el siguiente:
+
+- [Descarga de Processing](https://processing.org/download/)
+
+
+## Características del lenguaje
+
+### Estructura del programa
+
+```processing
+
+void setup () {
+  // Función de inicialización
+}
+
+void draw () {
+  // Función de dibujo. Se está ejecutando continuamente, una y otra vez de forma infinita
+}
+```
 
 ### Lienzo
 
@@ -10,6 +32,8 @@ Programación Creativa
 size (w,h);
 ```
 ---
+
+### Coordenadas del lienzo
 
 ![coordenadas de pantalla](coordenadas.svg)
 
@@ -32,7 +56,18 @@ ellipse (x,y,w,h)
 - h (height) - alto
 ``` 
 
+### Ejemplo 
 
+```processing
+void setup () {
+  size (600,400);
+}
+
+
+void draw () {
+   ellipse (300, 200, 50, 50);
+}
+```
 
 
 ### Fondo, color de línea y de relleno
@@ -52,7 +87,48 @@ fill (r,g,b);
 
 ![colores RGB](colores.jpg)
 
-### Ejemplo 01 
+### Ejemplo
+
+```processing
+// COLORES
+
+void setup () {
+  size (600,200);
+}
+
+
+void draw () {
+   fill (255, 0, 0); // ROJO BRILLANTE
+   ellipse (50, 50, 40, 40);
+   fill (0, 255, 0); // VERDE BRILLANTE
+   ellipse (150, 50, 40, 40);
+   fill (0, 0, 255); // AZUL BRILLANTE
+   ellipse (250, 50, 40, 40);
+
+   fill (255, 255, 0); // ROJO BRILLANTE + VERDE BRILLANTE
+   ellipse (350, 50, 40, 40);
+   fill (0, 255, 255); // VERDE BRILLANTE + AZUL BRILLANTE
+   ellipse (450, 50, 40, 40);
+   fill (255, 0, 255); // ROJO BRILLANTE + AZUL BRILLANTE
+   ellipse (550, 50, 40, 40); 
+   
+   fill (128, 0, 0); // ROJO MEDIO
+   ellipse (50, 150, 40, 40);
+   fill (0, 128, 0); // VERDE MEDIO
+   ellipse (150, 150, 40, 40);
+   fill (0, 0, 128); // AZUL MEDIO
+   ellipse (250, 150, 40, 40);
+   
+   fill (255, 255, 255); // ROJO BRILLANTE + VERDE BRILLANTE + AZUL BRILLANTE = BLANCO
+   ellipse (350, 150, 40, 40);
+   fill (0, 0, 0);      // NINGUN COLOR = NEGRO
+   ellipse (450, 150, 40, 40);   
+   fill (128, 128, 128); // GRIS
+   ellipse (550, 150, 40, 40); 
+}
+```
+
+### Ejemplo
 
 ```processing
 // POSICIONES ALEATORIAS
