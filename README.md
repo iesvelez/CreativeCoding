@@ -189,7 +189,116 @@ void draw(){
 ```
 
 
+### Ejemplo 99
 
+```processing
+class Particle {
+  PVector pos, vel, acc, prev;
+  float max = random(2, 8);
+  Particle() {
+    pos = new PVector(width/2, height/2);
+    prev = new PVector(pos.x, pos.y);
+    vel = new PVector(0, 0);
+    acc = new PVector(0, 0);
+  }
+  void copy() {
+    prev.x = pos.x;
+    prev.y = pos.y;
+  }
+  void run() {
+    follow();
+    update();
+    show();
+  }
+  void update() {
+    pos.add(vel);
+    vel.limit(max);
+    vel.add(acc);
+    acc.mult(0);
+    if (pos.x > width) {
+      pos.x = 0; 
+      copy();
+    }  
+    if (pos.x < 0) {
+      pos.x = width; 
+      copy();
+    } 
+    if (pos.y > height) {
+      pos.y = 0; 
+      copy();
+    }  
+    if (pos.y < 0) {
+      pos.y = height; 
+      copy();
+    }
+  }
+  void follow() {
+    int x = floor(pos.x / rez);
+    int y = floor(pos.y / rez);
+    PVector force = vectors[x + y * cols];
+    acc.add(force);
+  }
+  void show() {
+    stroke(col, 255, 255, 5);
+    line(pos.x, pos.y, prev.x, prev.y);
+    copy();
+  }
+}
+```
+
+```processing
+float xoff, yoff, zoff, inc, col;
+int rez, cols, rows, num;
+PVector[] vectors;
+ArrayList<Particle> particles;
+
+void setup() {
+  size(700, 500);
+  colorMode(HSB);
+  init();
+}
+
+
+void init() {
+  background(0);
+  rez = 10;
+  inc = 0.1;
+  num = 1000;
+  col = random(255);
+  cols = floor(width / rez) + 1;
+  rows = floor(height / rez) + 1;
+  vectors = new PVector[cols * rows];
+  particles = new ArrayList<Particle>();
+  for (int i=0; i<num; i++)
+    particles.add(new Particle());
+}
+
+void draw() {
+  yoff = 0;
+  for (int y=0; y<rows; y++) {
+    xoff = 0;
+    for (int x=0; x<cols; x++) {
+      float angle = noise(xoff, yoff, zoff) * TWO_PI * 2;
+      PVector v = PVector.fromAngle(angle);
+      v.setMag(1);
+      vectors[x + y * cols] = v;
+      xoff += inc;
+    }
+    yoff += inc;
+  }
+  zoff += 0.005;
+  if (col < 255)col += 0.1;
+  else col = 0;
+  for (Particle p : particles)p.run();
+}
+
+
+void mousePressed()
+{
+  background(255);
+  init();
+}
+```
 
 ## Referencias
 
