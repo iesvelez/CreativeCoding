@@ -7,9 +7,11 @@ Programación Creativa
 ### Lienzo
 
 ```processing
-size(w,h);
+size (w,h);
 ```
 ---
+
+![coordenadas de pantalla](coordenadas.svg)
 
 ```
 0,0-------> hacia infinito positivo
@@ -22,8 +24,10 @@ hacia infinito positivo
 ### Figuras
 
 ```processing
-rect(x,y,w,h)
-ellipse(x,y,w,h)
+point (x,y);
+line (x1,y1,x2,y2);
+rect (x,y,w,h)
+ellipse (x,y,w,h)
 ```
 ---
 
@@ -40,22 +44,77 @@ ellipse(x,y,w,h)
 ### Fondo, color de línea y de relleno
 
 ```processing
-background(r,g,b);
-stroke(r,g,b);
-fill(r,g,b);
+background (r,g,b);
+stroke (r,g,b);
+fill (r,g,b);
 ```
 ---
 
 ``` 
-- r (red)   - cantidad de rojo, de 0 (ninguno) a 255 (máximo)
+- r (red)   - cantidad de rojo,  de 0 (ninguno) a 255 (máximo)
 - g (blue)  - cantidad de verde, de 0 (ninguno) a 255 (máximo)
-- b (green) - cantidad de azul, de 0 (ninguno) a 255 (máximo)
+- b (green) - cantidad de azul,  de 0 (ninguno) a 255 (máximo)
 ```
 
+![colores RGB](colores.svg)
 
 ### Ejemplo 01 
 
 ```processing
+// POSICIONES ALEATORIAS
+
+void setup () {
+  size (600,420);
+  background(128);
+}
+
+void draw () {
+   ellipse( random(0,width), random(0,height), 20, 20); 
+}
+```
+
+### Ejemplo 
+
+```processing
+// POSICIONES Y COLORES ALEATORIOS
+
+void setup () {
+  size (600,420);
+  background(255);
+}
+
+
+void draw () {
+   fill ( random(0,255), random(0,255), random(0,255), random(0,255) );
+   ellipse( random(0,width), random(0,height), 20, 20); 
+}
+```
+
+### Ejemplo 
+
+```processing
+// POSICIONES, COLORES Y TAMAÑOS ALEATORIOS
+float radio;
+
+void setup () {
+  size (600,420);
+  background(255);
+}
+
+
+void draw () {
+   fill ( random(0,255), random(0,255), random(0,255), random(0,255) );
+   radio = random (10, 50);
+   ellipse( random(0,width), random(0,height), radio, radio); 
+}
+```
+
+
+### Ejemplo
+
+```processing
+// POSICIONAMIENTO CON EL RATÓN
+
 void setup() {
   size(500,400);
 }
@@ -69,9 +128,11 @@ void draw() {
 }
 ```
 
-### Ejemplo 02
+### Ejemplo
 
 ```processing
+// POSICIONAMIENTO CON EL RATÓN
+
 void setup() {
   size(500,400);
   background(0);
@@ -84,9 +145,110 @@ void draw() {
 }
 ```
 
-### Ejemplo 03
+### Ejemplo
 
 ```processing
+// OPACIDAD
+//   0: totalmente transparente
+// 255: totalmente opaco
+
+void setup() {
+  size(600,400); 
+  noStroke();
+  background(0);  
+}
+
+void draw() {
+  fill(128, 20);  // Relleno color gris (128), opacidad: 20 (en rango 0 a 255)
+  ellipse(mouseX, mouseY, 30, 30);
+}
+```
+
+### Ejemplo
+
+```processing
+// OPACIDAD
+//   0: totalmente transparente
+// 255: totalmente opaco
+
+void setup() {
+  size(600,400); 
+  noStroke();
+  background(0);  
+}
+
+void draw() {
+  fill(0, 20);  // Relleno color negro (0), opacidad: 20 (en rango 0 a 255)
+  rect(0,0,width,height);
+
+  fill (255);
+  ellipse(mouseX, mouseY, 30, 30);
+}
+```
+
+
+### Ejemplo 
+
+```processing
+// PELOTA MOVIENDOSE
+
+int posX = 0;
+int posY = 0;
+
+void setup () {
+  size (600,400);
+  background(128);
+  stroke(255,0,0);
+  fill(255);
+  ellipse(posX, posY, 20, 20);
+}
+
+void draw () {
+   posX = posX + 2;
+   posY = posY + 2;
+   
+   background(128);
+   ellipse(posX, posY, 20, 20); 
+}
+```
+
+### Ejemplo 
+
+```processing
+// PELOTA REBOTANDO
+
+int posX = 0;
+int posY = 0;
+
+int incX = 2;
+int incY = 2;
+
+void setup () {
+  size (600,420);
+  background(128);
+  stroke(255,0,0);
+  fill(255);
+  ellipse(posX, posY, 20, 20);
+}
+
+void draw () {
+   background (128);
+   posX = posX + incX;
+   posY = posY + incY;
+   
+   if (posX > width  || posX < 0) incX = -incX; // Cambiamos de dirección en X
+   if (posY > height || posY < 0) incY = -incY; // Cambiamos de dirección en Y
+  
+   ellipse(posX, posY, 20, 20); 
+}
+```
+
+
+### Ejemplo 
+
+```processing
+// VARIAS FIGURAS
+
 void setup() {
   size(500, 400);
   background(10, 80, 100);
@@ -105,9 +267,32 @@ void draw() {
 }
 ```
 
-### Ejemplo 04
+
+### Ejemplo 
 
 ```processing
+// IMAGEN COMO FONDO
+// El tamaño indicado en size() debe ser exactamente igual al de la imagen.
+
+PImage img;
+
+void setup(){  
+  size (600,423); // Tamaño de la imagen "pony.png"
+  img = loadImage("pony.png");
+  background(img);
+}
+
+void draw(){
+  background(img);
+  ellipse(mouseX,mouseY,50,50); 
+}
+```
+
+### Ejemplo 
+
+```processing
+// EVENTOS DEL RATÓN
+
 void setup() {
   size(500,400);
 }
@@ -126,9 +311,11 @@ void draw() {
 ```
 
 
-### Ejemplo 05
+### Ejemplo 
 
 ```processing
+// FUNCION EXIT
+
 void setup() {
   size(500,400);
 }
@@ -143,9 +330,11 @@ void mousePressed() {
 ``` 
 
 
-### Ejemplo 06
+### Ejemplo 
 
 ```processing
+// EVENTOS DEL RATÓN
+
 void setup() {
   size(500,400);
 }
@@ -163,9 +352,11 @@ void draw() {
 }
 ```
 
-### Ejemplo 07
+### Ejemplo 
 
 ```processing
+// EVENTOS DEL RATÓN
+
 void setup() {
   size(500, 400);
   background(10, 80, 100);
@@ -188,27 +379,12 @@ void draw() {
 }
 ```
 
-### Ejemplo 08
+
+### Ejemplo 
 
 ```processing
-PImage img;
+// EVENTOS DEL TECLADO
 
-void setup(){  
-  size (800,600);
-  background(180);
-  img = loadImage("pony.png");
-}
-
-void draw(){
-  background(180);
-  image(img,0,0);
-  ellipse(mouseX,mouseY,50,50); 
-}
-```
-
-### Ejemplo 08
-
-```processing
 int posX; 
 int posY;
 PImage img;
@@ -256,7 +432,6 @@ void keyPressed()
   } 
 }
 
-
 void mousePressed()
 {
   exit();
@@ -267,6 +442,8 @@ void mousePressed()
 ### Ejemplo 99
 
 ```processing
+// USO DE CLASES
+
 class Particle {
   PVector pos, vel, acc, prev;
   float max = random(2, 8);
