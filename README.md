@@ -302,7 +302,7 @@ void setup () {
 }
 
 void draw () {
-   background (128);
+   // background (128);
    posX = posX + incX;
    posY = posY + incY;
    
