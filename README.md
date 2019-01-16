@@ -42,10 +42,10 @@ size (w,h);
 ### Figuras
 
 ```processing
-point (x,y);
-line (x1,y1,x2,y2);
-rect (x,y,w,h)
-ellipse (x,y,w,h)
+point   (x, y);
+line    (x1, y1, x2, y2);
+rect    (x, y, w, h)
+ellipse (x, y, w, h)
 ```
 ---
 
@@ -72,12 +72,24 @@ void draw () {
 
 ### Fondo, color de línea y de relleno
 
+#### Grises
+
 ```processing
-background (r,g,b);
-stroke (r,g,b);
-fill (r,g,b);
+background (gris);  // Fondo
+stroke     (gris);  // Color de línea de las figuras
+fill       (gris);  // Color de relleno de las figuras
 ```
----
+
+![escala grises](gris.png)
+
+
+### Colores
+
+```processing
+background (r,g,b);  // Fondo
+stroke     (r,g,b);  // Color de línea de las figuras
+fill       (r,g,b);  // Color de relleno de las figuras
+```
 
 ``` 
 - r (red)   - cantidad de rojo,  de 0 (ninguno) a 255 (máximo)
@@ -85,7 +97,27 @@ fill (r,g,b);
 - b (green) - cantidad de azul,  de 0 (ninguno) a 255 (máximo)
 ```
 
+![escala RGB](rgb.png)
+
 ![colores RGB](colores.jpg)
+
+#### Opacidad
+
+Es el grado en el cual un color deja pasar la luz, es decir su opacidad/transparencia.
+
+```processing
+background (r,g,b,a);  // Fondo
+stroke     (r,g,b,a);  // Color de línea de las figuras
+fill       (r,g,b,a);  // Color de relleno de las figuras
+```
+
+El cuarto parámetro se conoce como **alfa**, e indica el grado de opacidad.
+
+![escala opacidad](opacidad.png)
+
+
+---     
+
 
 ### Ejemplo
 
