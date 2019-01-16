@@ -74,10 +74,13 @@ void draw () {
 
 Para indicar la intensidad de color se utiliza el intervalo numérico **de 0 a 255**, siendo:
 
-- 0    ausencia de color.
-- ...  distintos grados de color.
-- 255  color intenso.
- 
+```
+- 0        ausencia de color.
+  .
+  .        distintos grados de color.
+  .
+- 255      color intenso.
+``` 
 
 #### Blanco
 
@@ -90,6 +93,10 @@ Si trabajamos únicamente con escalas de grises, a medida que añadimos "color" 
 background (w);  // Fondo
 stroke     (w);  // Color de línea de las figuras
 fill       (w);  // Color de relleno de las figuras
+```
+
+```
+- w (white)   - cantidad de blanco,  de 0 (ninguno) a 255 (máximo)
 ```
 
 ![escala grises](images/gris.png)
@@ -129,6 +136,10 @@ fill       (r,g,b,a);  // Color de relleno de las figuras
 ```
 
 El cuarto parámetro se conoce como **alfa**, e indica el grado de opacidad.
+
+```
+- a (alpha)   - grado de opacidad,  de 0 (transparente) a 255 (opaco)
+```
 
 ![escala opacidad](images/opacidad.png)
 
