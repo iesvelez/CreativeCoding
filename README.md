@@ -35,7 +35,7 @@ size (w,h);
 
 ### Coordenadas del lienzo
 
-![coordenadas de pantalla](coordenadas.svg)
+![coordenadas de pantalla](images/coordenadas.svg)
 
 
 
@@ -80,7 +80,7 @@ stroke     (gris);  // Color de línea de las figuras
 fill       (gris);  // Color de relleno de las figuras
 ```
 
-![escala grises](gris.png)
+![escala grises](images/gris.png)
 
 
 ### Colores
@@ -97,9 +97,9 @@ fill       (r,g,b);  // Color de relleno de las figuras
 - b (green) - cantidad de azul,  de 0 (ninguno) a 255 (máximo)
 ```
 
-![escala RGB](rgb.png)
+![escala RGB](images/rgb.png)
 
-![colores RGB](colores.jpg)
+![colores RGB](images/colores.jpg)
 
 #### Opacidad
 
@@ -113,7 +113,7 @@ fill       (r,g,b,a);  // Color de relleno de las figuras
 
 El cuarto parámetro se conoce como **alfa**, e indica el grado de opacidad.
 
-![escala opacidad](opacidad.png)
+![escala opacidad](images/opacidad.png)
 
 
 ---     
@@ -372,6 +372,10 @@ void draw() {
 
 ### Ejemplo 
 
+Para el siguiente ejemplo es necesaria la siguiente imagen:
+
+![pony](pony.png)
+
 ```processing
 // IMAGEN COMO FONDO
 // El tamaño indicado en size() debe ser exactamente igual al de la imagen.
@@ -483,6 +487,10 @@ void draw() {
 
 
 ### Ejemplo 
+
+Para el siguiente ejemplo es necesaria la siguiente imagen:
+
+![mario](mario.png)
 
 ```processing
 // EVENTOS DEL TECLADO
