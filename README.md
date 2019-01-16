@@ -72,18 +72,30 @@ void draw () {
 
 ### Fondo, color de línea y de relleno
 
-#### Grises
+Para indicar la intensidad de color se utiliza el intervalo numérico **de 0 a 255**, siendo:
+
+- 0    ausencia de color.
+- ...  distintos grados de color.
+- 255  color intenso.
+ 
+
+#### Blanco
+
+En la mayoría de las pantallas, la ausencia de color se interpreta como negro.
+
+Si trabajamos únicamente con escalas de grises, a medida que añadimos "color" la imagen se va haciendo cada vez más blanca.
+ 
 
 ```processing
-background (gris);  // Fondo
-stroke     (gris);  // Color de línea de las figuras
-fill       (gris);  // Color de relleno de las figuras
+background (w);  // Fondo
+stroke     (w);  // Color de línea de las figuras
+fill       (w);  // Color de relleno de las figuras
 ```
 
 ![escala grises](images/gris.png)
 
 
-### Colores
+#### Colores
 
 ```processing
 background (r,g,b);  // Fondo
@@ -99,7 +111,12 @@ fill       (r,g,b);  // Color de relleno de las figuras
 
 ![escala RGB](images/rgb.png)
 
+
+Combinando los distintos colores, en distinto grado, podemos obtener todo el resto de colores.
+
+
 ![colores RGB](images/colores.jpg)
+
 
 #### Opacidad
 
@@ -116,7 +133,6 @@ El cuarto parámetro se conoce como **alfa**, e indica el grado de opacidad.
 ![escala opacidad](images/opacidad.png)
 
 
----     
 
 
 ### Ejemplo
