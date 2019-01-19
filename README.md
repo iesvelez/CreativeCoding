@@ -147,7 +147,7 @@ El cuarto parámetro se conoce como **alfa**, e indica el grado de opacidad.
 
 
 
-### Ejemplo
+### Ejemplo 02
 
 ```processing
 // COLORES
