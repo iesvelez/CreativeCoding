@@ -57,7 +57,7 @@ ellipse (x, y, w, h)
 - h (height) - alto
 ``` 
 
-### Ejemplo 
+### Ejemplo 01 
 
 ```processing
 void setup () {
