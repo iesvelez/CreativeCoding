@@ -243,6 +243,30 @@ void draw () {
 ### Ejemplo
 
 ```processing
+// CUBO  3D
+
+void setup () {
+  size(800, 800, P3D);
+  noStroke();
+  imageMode(CENTER);
+}
+
+void draw(){
+  background(50, 50, 200);  
+  pointLight(255, 255, 255,   0, 0, 400);  
+//  pointLight(255, 255, 255, width, height, 400);  
+
+  translate(width/2, height/2, 0);
+  rotateY(map (mouseX, 0, width, 0, radians(360)));
+  rotateX(map (mouseY, 0, height, 0, radians(360)));
+  
+  box(200);
+}
+```
+
+### Ejemplo
+
+```processing
 // POSICIONAMIENTO CON EL RATÓN
 
 void setup() {
