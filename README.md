@@ -6,10 +6,9 @@ Programación Creativa
 ## Referencias
 
 - [Video introductorio, en inglés](https://www.pbs.org/video/-book-art-creative-coding/)
-- [Processing](https://processing.org/)
 - [Videos de Processing, Nivel iniciación, en español](https://youtu.be/60r2JKNmQIE)
 - [Videos de Processing, Nivel intermedio, en inglés](https://youtu.be/2VLaIr5Ckbs)
-- [Videotutorial básico de Processing con Daniel Shiffman, en inglés](https://hello.processing.org/editor/)
+- [Código fuente de los ejemplos del libro Learning Processing de Daniel Shiffman](https://github.com/shiffman/LearningProcessing)
 - [Un listado muy extenso de recursos. Creative Coding Awesone](https://github.com/terkelg/awesome-creative-coding)
 
 [//]: # ( https://drive.google.com/drive/folders/10sP3aN-cZyZxPL-StfV8EEXgOnLu0vnh?usp=sharing )
@@ -634,6 +633,29 @@ void mousePressed()
 {
   exit();
 } 
+```
+
+### Ejemplo captura video
+
+> Nota: Processing sólo funciona con la biblioteca GStreamer0.1-dev, sin embargo todas las distribuciones linux modernas traen GStreamer1.0-dev, la cual no es válida para processing. Por tanto el código del ejemplo siguiente está escrito en Javascript con p5.js. Para ejecutarlo, entra en el enlace que aparece a continuación y escribe el código que se muestra.
+
+- https://editor.p5js.org/
+
+```javascript
+let capture;
+
+function setup() {
+  createCanvas(390, 240);
+  capture = createCapture(VIDEO);
+  capture.size(320, 240);
+  //capture.hide();
+}
+
+function draw() {
+  background(255);
+  image(capture, 0, 0, 320, 240);
+  filter('INVERT');
+}
 ```
 
 
