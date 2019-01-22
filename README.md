@@ -3,6 +3,17 @@
 Programación Creativa
 
 
+## Referencias
+
+- [Video introductorio, en inglés](https://www.pbs.org/video/-book-art-creative-coding/)
+- [Processing](https://processing.org/)
+- [Videos de Processing, Nivel iniciación, en español](https://youtu.be/60r2JKNmQIE)
+- [Videos de Processing, Nivel intermedio, en inglés](https://youtu.be/2VLaIr5Ckbs)
+- [Videotutorial básico de Processing con Daniel Shiffman, en inglés](https://hello.processing.org/editor/)
+- [Un listado muy extenso de recursos. Creative Coding Awesone](https://github.com/terkelg/awesome-creative-coding)
+
+[//]: # ( https://drive.google.com/drive/folders/10sP3aN-cZyZxPL-StfV8EEXgOnLu0vnh?usp=sharing )
+
 ## Introducción
 
 Esto es una iniciación a la Programación Creativa usando el lenguaje Processing, el cual se basa en Java.
@@ -146,8 +157,33 @@ El cuarto parámetro se conoce como **alfa**, e indica el grado de opacidad.
 
 
 
-
 ### Ejemplo 02
+
+```processing
+// COLORES
+// Para probar el afinamiento, pulsamos:
+// - Ctrl+S para guardar el sketch
+// - Ctrl+May+T para hacer TWEAK
+
+void setup (){
+  size (600,400);
+}
+
+void draw(){
+  background (255);
+  
+  fill (128,128,128);
+  rect(50, 50, 100, 100);
+  
+  fill (0,0,255);
+  ellipse(300, 200, 100, 100);
+}
+
+
+```
+
+
+### Ejemplo 03
 
 ```processing
 // COLORES
@@ -814,10 +850,3 @@ class Particle {
 }
 ```
 
-
-## Referencias
-
-- [Video introductorio, en inglés](https://www.pbs.org/video/-book-art-creative-coding/)
-- [Processing](https://processing.org/)
-- [Videotutorial básico de Processing con Daniel Shiffman, en inglés](https://hello.processing.org/editor/)
-- [Un listado muy extenso de recursos. Creative Coding Awesone](https://github.com/terkelg/awesome-creative-coding)
