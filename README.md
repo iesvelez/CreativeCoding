@@ -161,9 +161,9 @@ El cuarto parámetro se conoce como **alfa**, e indica el grado de opacidad.
 
 ```processing
 // COLORES
-// Para probar el afinamiento, pulsamos:
-// - Ctrl+S para guardar el sketch
-// - Ctrl+May+T para hacer TWEAK
+// Para retocar, pulsamos:
+// - Ctrl+S o Archivo->Guardar, para guardar el sketch
+// - Ctrl+May+T o Sketch->Tweak, para retocar
 
 void setup (){
   size (600,400);
