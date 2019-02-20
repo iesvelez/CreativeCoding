@@ -12,6 +12,7 @@ Programación Creativa
 - [Videos de Processing, Nivel intermedio, en inglés](https://www.youtube.com/user/shiffman/playlists?view=50&sort=dd&shelf_id=2)
 - [Código fuente de los ejemplos del libro Learning Processing de Daniel Shiffman](https://github.com/shiffman/LearningProcessing)
 - [Un listado muy extenso de recursos. Creative Coding Awesone](https://github.com/terkelg/awesome-creative-coding)
+- [Aplicación web para crear GIF animados](https://ezgif.com)
 
 [//]: # ( https://drive.google.com/drive/folders/10sP3aN-cZyZxPL-StfV8EEXgOnLu0vnh?usp=sharing )
 
