@@ -12,7 +12,9 @@ Programación Creativa
 - [Videos de Processing, Nivel intermedio, en inglés](https://www.youtube.com/user/shiffman/playlists?view=50&sort=dd&shelf_id=2)
 - [Código fuente de los ejemplos del libro Learning Processing de Daniel Shiffman](https://github.com/shiffman/LearningProcessing)
 - [Un listado muy extenso de recursos. Creative Coding Awesone](https://github.com/terkelg/awesome-creative-coding)
+- [Referencia on-line de Processing](https://processing.org/reference/)
 - [Aplicación web para crear GIF animados](https://ezgif.com)
+- **[Taller de Creative Coding del IES Luis Vélez de Guevara](https://iesluisvelez-creativecoding.tumblr.com/)**
 
 [//]: # ( https://drive.google.com/drive/folders/10sP3aN-cZyZxPL-StfV8EEXgOnLu0vnh?usp=sharing )
 
@@ -56,10 +58,12 @@ size (w,h);
 ### Figuras
 
 ```processing
-point   (x, y);
-line    (x1, y1, x2, y2);
-rect    (x, y, w, h)
-ellipse (x, y, w, h)
+point    (x, y);
+line     (x1, y1, x2, y2);
+rect     (x, y, w, h);
+ellipse  (x, y, w, h);
+triangle (x1,y1, x2,y2, x3,y3);
+quad     (x1,y1, x2,y2, x3,y3, x4,y4);
 ```
 ---
 
@@ -70,7 +74,7 @@ ellipse (x, y, w, h)
 - h (height) - alto
 ``` 
 
-### Ejemplo 01 
+### Ejemplo: Elipse
 
 ```processing
 void setup () {
@@ -159,7 +163,7 @@ El cuarto parámetro se conoce como **alfa**, e indica el grado de opacidad.
 
 
 
-### Ejemplo 02
+### Ejemplo: Colores 1
 
 ```processing
 // COLORES
@@ -185,7 +189,7 @@ void draw(){
 ```
 
 
-### Ejemplo 03
+### Ejemplo: Colores 2
 
 ```processing
 // COLORES
@@ -226,7 +230,7 @@ void draw () {
 }
 ```
 
-### Ejemplo
+### Ejemplo: Posiciones aleatorias 1
 
 ```processing
 // POSICIONES ALEATORIAS
@@ -241,7 +245,7 @@ void draw () {
 }
 ```
 
-### Ejemplo 
+### Ejemplo: Posiciones aleatorias 2
 
 ```processing
 // POSICIONES Y COLORES ALEATORIOS
@@ -258,7 +262,7 @@ void draw () {
 }
 ```
 
-### Ejemplo 
+### Ejemplo: Posiciones aleatorias 3
 
 ```processing
 // POSICIONES, COLORES Y TAMAÑOS ALEATORIOS
@@ -278,7 +282,7 @@ void draw () {
 ```
 
 
-### Ejemplo
+### Ejemplo: Cubo 3D
 
 ```processing
 // CUBO  3D
@@ -302,7 +306,7 @@ void draw(){
 }
 ```
 
-### Ejemplo
+### Ejemplo: Interactividad con ratón 1
 
 ```processing
 // POSICIONAMIENTO CON EL RATÓN
@@ -320,7 +324,7 @@ void draw() {
 }
 ```
 
-### Ejemplo
+### Ejemplo: Interactividad con ratón 2
 
 ```processing
 // POSICIONAMIENTO CON EL RATÓN
@@ -337,7 +341,7 @@ void draw() {
 }
 ```
 
-### Ejemplo
+### Ejemplo: Interactividad con ratón 3
 
 ```processing
 // OPACIDAD
@@ -356,7 +360,7 @@ void draw() {
 }
 ```
 
-### Ejemplo
+### Ejemplo: Interactividad con ratón 4
 
 ```processing
 // OPACIDAD
@@ -379,7 +383,7 @@ void draw() {
 ```
 
 
-### Ejemplo 
+### Ejemplo: Pelota moviéndose
 
 ```processing
 // PELOTA MOVIENDOSE
@@ -404,7 +408,7 @@ void draw () {
 }
 ```
 
-### Ejemplo 
+### Ejemplo: Pelota rebotando
 
 ```processing
 // PELOTA REBOTANDO
@@ -436,7 +440,7 @@ void draw () {
 ```
 
 
-### Ejemplo 
+### Ejemplo: Varias figuras
 
 ```processing
 // VARIAS FIGURAS
@@ -460,7 +464,7 @@ void draw() {
 ```
 
 
-### Ejemplo 
+### Ejemplo: Imagen de fondo
 
 Para el siguiente ejemplo es necesaria la siguiente imagen:
 
@@ -484,7 +488,7 @@ void draw(){
 }
 ```
 
-### Ejemplo 
+### Ejemplo: Eventos del ratón 1
 
 ```processing
 // EVENTOS DEL RATÓN
@@ -507,7 +511,7 @@ void draw() {
 ```
 
 
-### Ejemplo 
+### Ejemplo: Función exit
 
 ```processing
 // FUNCION EXIT
@@ -526,7 +530,7 @@ void mousePressed() {
 ``` 
 
 
-### Ejemplo 
+### Ejemplo:  Eventos del ratón 2
 
 ```processing
 // EVENTOS DEL RATÓN
@@ -548,7 +552,7 @@ void draw() {
 }
 ```
 
-### Ejemplo 
+### Ejemplo:  Eventos del ratón 3
 
 ```processing
 // EVENTOS DEL RATÓN
@@ -576,7 +580,7 @@ void draw() {
 ```
 
 
-### Ejemplo 
+### Ejemplo:  Eventos del teclado 1
 
 Para el siguiente ejemplo es necesaria la siguiente imagen:
 
@@ -638,7 +642,7 @@ void mousePressed()
 } 
 ```
 
-### Ejemplo captura video
+### Ejemplo: Captura de video
 
 > Nota: Processing sólo funciona con la biblioteca GStreamer0.1-dev, sin embargo todas las distribuciones linux modernas traen GStreamer1.0-dev, la cual no es válida para processing. Por tanto el código del ejemplo siguiente está escrito en Javascript con p5.js. Para ejecutarlo, entra en el enlace que aparece a continuación y escribe el código que se muestra.
 
@@ -662,7 +666,7 @@ function draw() {
 ```
 
 
-### Ejemplo 98
+### Ejemplo: Pelotas rebotando
 
 ```processing
 // PELOTAS REBOTANDO
@@ -756,7 +760,7 @@ class Ball {
 }
 ```
 
-### Ejemplo 99
+### Ejemplo: Partículas
 
 ```processing
 // PARTICULAS
