@@ -646,6 +646,8 @@ void mousePressed()
 ### Ejemplo: Captura de video
 
 > Nota: Processing sólo funciona con la biblioteca GStreamer0.1-dev, sin embargo todas las distribuciones linux modernas traen GStreamer1.0-dev, la cual no es válida para processing. Por tanto el código del ejemplo siguiente está escrito en Javascript con p5.js. Para ejecutarlo, entra en el enlace que aparece a continuación y escribe el código que se muestra.
+> Más información: https://discourse.processing.org/t/error-in-video-librarie/2580/4
+
 
 - https://editor.p5js.org/
 
