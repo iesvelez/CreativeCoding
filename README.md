@@ -8,8 +8,8 @@ Programación Creativa
 - [Video introductorio, en inglés](https://www.pbs.org/video/-book-art-creative-coding/)
 - [Demos de Saskia Freeke](http://sasj.tumblr.com/archive)
 - [Demos de Bee & Bombs](https://beesandbombs.tumblr.com/archive)
-- [Videos de Processing, Nivel iniciación, en español](https://youtu.be/60r2JKNmQIE)
-- [Videos de Processing, Nivel intermedio, en inglés](https://youtu.be/2VLaIr5Ckbs)
+- [Videos de Processing, Nivel iniciación, en español](https://www.youtube.com/playlist?list=PLtyMmy0eKyqFsLPesmz7y4EznkZFJrGuu)
+- [Videos de Processing, Nivel intermedio, en inglés](https://www.youtube.com/user/shiffman/playlists?view=50&sort=dd&shelf_id=2)
 - [Código fuente de los ejemplos del libro Learning Processing de Daniel Shiffman](https://github.com/shiffman/LearningProcessing)
 - [Un listado muy extenso de recursos. Creative Coding Awesone](https://github.com/terkelg/awesome-creative-coding)
 
