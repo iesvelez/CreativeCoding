@@ -883,6 +883,6 @@ class Particle {
 }
 ```
 
-##  Sitio con ejemplos y su código
+##  Selección de *sketches* interesantes recopilados por mí
 
-- https://www.openprocessing.org/browse#
+- https://www.openprocessing.org/user/158770#sketches
