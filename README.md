@@ -1,3 +1,7 @@
+> Material desarrollado para las Jornadas de FP "Vélez Impulsa"
+>
+> IES Luis Vélez de Guevara (Écija, Spain)
+
 # CreativeCoding
 
 Programación Creativa
